@@ -9,9 +9,11 @@ This is a proposed plugin for FPP that would be an alternate scheduler for [FPP]
 * Allows for custom variables to be defined and tracked at both global and "per playlist" level (*example: "seconds since last played" (playlist level), "number of votes" (playlist level), "last time any bumper played" (global level), etc.*) 
 * Leveraging the above variables, specific algorithms can run to adjust priority.While the plugin will ship with some rules, these rules can easily be expanded with custom Javascript. Based on these variables, specific algorithms can periodically run to adjust the priority of a specific playlist. 
 * The publisher system can periodically publish information to both MQTT and REST API endpoints.  This information includes available playlists (useful for a voting website, current playlists and its duration, next scheduled playlists, overall scheduler health, and potentially more information in the future.) 
+* A GUI front end for configuring variables and priority rules.
 
 ## Initial Constraints
 * Like the default scheduler, this scheduler playlists and not sequences. This is mostly to allow for the flexibility the play list provides for doing pre-post tasks
 * This scheduler will initially only allow for a single playlist to be running at a time. 
 
-
+## Prior work
+This would be expected to replace https://github.com/ghormann/fppscheduler which has no front end today.
